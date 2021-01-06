@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from typing import List, TypedDict
+
+# from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -22,7 +25,28 @@ Ahli Parlimen:
 }
 """
 
-wakil_rakyat_parlimen_db = [
+
+# class WakilRakyat(BaseModel):
+#     id: int
+#     kod: str
+#     kawasan: str
+#     nama_wakil_rakyat: str
+#     parti: str
+
+# class WakilRakyat(TypedDict):
+#     id: int
+#     kod: str
+#     kawasan: str
+#     nama_wakil_rakyat: str
+#     parti: str
+
+
+WakilRakyat = TypedDict(
+    "WakilRakyat",
+    {"id": int, "kod": str, "kawasan": str, "nama_wakil_rakyat": str, "parti": str},
+)
+
+wakil_rakyat_parlimen_db: List[WakilRakyat] = [
     {
         "id": 1,
         "kod": "P001",
