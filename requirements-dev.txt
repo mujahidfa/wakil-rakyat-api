@@ -3,3 +3,6 @@ uvicorn
 black
 flake8
 pip-autoremove
+requests
+lxml
+typing-extensions
