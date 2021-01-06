@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+black
+flake8
+pip-autoremove
