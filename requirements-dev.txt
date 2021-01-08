@@ -6,3 +6,4 @@ pip-autoremove
 requests
 lxml
 typing-extensions
+jupyterlab

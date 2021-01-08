@@ -2,13 +2,18 @@
 
 An unofficial REST API to access a list of wakil rakyats in the Malaysian parliament.
 
+Data obtained from [Portal Data Terbuka Malaysia](https://www.data.gov.my/) and [DUN Sarawak](https://duns.sarawak.gov.my/page-0-40-150-Maklumat-Ahli-DUN-Sarawak.html).
+
 **IMPORTANT**: Please DON'T ABUSE the API, I'm running on free tier so bandwidth is limited. Just so that everyone can use it, please limit your usage, otherwise I'll have to block your IP, thanks!
 
 ## Endpoints
 
--   https://rrwz4p.deta.dev/kerusi/{kod} : returns an ahli parlimen according to it's kod parlimen
--   https://rrwz4p.deta.dev/kerusi : returns all ahli parlimen data
--   See https://rrwz4p.deta.dev/docs for more info
+-   `/parlimen` - returns all ahli parlimen data
+-   `/parlimen/{kod_parlimen}` - returns an ahli parlimen data according to it's kod kerusi parlimen
+-   `/parlimen/{kod_parlimen}/dun` - returns all DUN under a parlimen
+-   `/parlimen/{kod_parlimen}/dun/{kod_dun}` - returns a DUN data under a parlimen according to it's kod kerusi DUN
+
+See `/docs` for more info.
 
 ## TODOs
 
@@ -20,12 +25,6 @@ Add more endpoints, more data attributes etc. Feel free to suggest new features 
 
 ```bash
 pip install requirements-dev.txt
-```
-
-### Scrape latest data from [Portal Rasmi Parlimen Malaysia](https://www.parlimen.gov.my/)
-
-```bash
-python scrape.py
 ```
 
 ### Start the server
